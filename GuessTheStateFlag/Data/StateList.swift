@@ -11,10 +11,7 @@ struct USAState {
     let id: Int
     let stateName: String
     let capital: String
-    
     static let example = USAState(id: 1, stateName: "Minnesota", capital: "St.Paul")
-    
- 
 }
 
 var stateList = [
@@ -69,9 +66,3 @@ var stateList = [
     USAState(id: 49, stateName: "Wyoming", capital: "Cheyenne"),
     USAState(id: 50, stateName: "Virginia", capital: "Richmond")
 ].shuffled()
-
-
-
-
-
-

@@ -15,6 +15,7 @@
 		816FDD0C2A53222A00DD25CB /* Extension-FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FDD0B2A53222A00DD25CB /* Extension-FontStyles.swift */; };
 		816FDD0E2A532F5D00DD25CB /* StateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FDD0D2A532F5D00DD25CB /* StateList.swift */; };
 		816FDD122A5335C100DD25CB /* Extension-RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FDD112A5335C100DD25CB /* Extension-RoundedCorner.swift */; };
+		816FDD182A57225000DD25CB /* ButtonStyle - Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FDD172A57225000DD25CB /* ButtonStyle - Rotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		816FDD0B2A53222A00DD25CB /* Extension-FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-FontStyles.swift"; sourceTree = "<group>"; };
 		816FDD0D2A532F5D00DD25CB /* StateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateList.swift; sourceTree = "<group>"; };
 		816FDD112A5335C100DD25CB /* Extension-RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-RoundedCorner.swift"; sourceTree = "<group>"; };
+		816FDD172A57225000DD25CB /* ButtonStyle - Rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle - Rotation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				816FDCFA2A53184D00DD25CB /* GuessTheStateFlagApp.swift */,
-				816FDCFC2A53184D00DD25CB /* ContentView.swift */,
+				816FDD1B2A5726B300DD25CB /* Views */,
+				816FDD1C2A5726BA00DD25CB /* ButtonStyles */,
 				816FDD162A533F6800DD25CB /* Data */,
 				816FDD152A533F6000DD25CB /* Extensions */,
 				816FDCFE2A53184E00DD25CB /* Assets.xcassets */,
@@ -93,6 +96,22 @@
 				816FDD0D2A532F5D00DD25CB /* StateList.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		816FDD1B2A5726B300DD25CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				816FDCFC2A53184D00DD25CB /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		816FDD1C2A5726BA00DD25CB /* ButtonStyles */ = {
+			isa = PBXGroup;
+			children = (
+				816FDD172A57225000DD25CB /* ButtonStyle - Rotation.swift */,
+			);
+			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +210,7 @@
 				816FDD0E2A532F5D00DD25CB /* StateList.swift in Sources */,
 				816FDCFD2A53184D00DD25CB /* ContentView.swift in Sources */,
 				816FDD122A5335C100DD25CB /* Extension-RoundedCorner.swift in Sources */,
+				816FDD182A57225000DD25CB /* ButtonStyle - Rotation.swift in Sources */,
 				816FDCFB2A53184D00DD25CB /* GuessTheStateFlagApp.swift in Sources */,
 				816FDD0C2A53222A00DD25CB /* Extension-FontStyles.swift in Sources */,
 				816FDD092A531DD200DD25CB /* Extension-Color.swift in Sources */,
@@ -250,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -304,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -15,6 +15,7 @@ struct TitleText: ViewModifier {
             .foregroundStyle(.thickMaterial)
             .fontDesign(.monospaced)
             .fontWeight(.medium)
+            .minimumScaleFactor(0.8)
             .padding()
     }
 }
