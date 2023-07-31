@@ -16,6 +16,8 @@
 		816FDD0E2A532F5D00DD25CB /* StateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FDD0D2A532F5D00DD25CB /* StateList.swift */; };
 		816FDD122A5335C100DD25CB /* Extension-RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FDD112A5335C100DD25CB /* Extension-RoundedCorner.swift */; };
 		816FDD182A57225000DD25CB /* ButtonStyle - Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FDD172A57225000DD25CB /* ButtonStyle - Rotation.swift */; };
+		81C456372A78161200CAC39A /* BonusRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C456362A78161200CAC39A /* BonusRoundView.swift */; };
+		81C456392A781F5C00CAC39A /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C456382A781F5C00CAC39A /* GameBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		816FDD0D2A532F5D00DD25CB /* StateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateList.swift; sourceTree = "<group>"; };
 		816FDD112A5335C100DD25CB /* Extension-RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-RoundedCorner.swift"; sourceTree = "<group>"; };
 		816FDD172A57225000DD25CB /* ButtonStyle - Rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle - Rotation.swift"; sourceTree = "<group>"; };
+		81C456352A78141700CAC39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		81C456362A78161200CAC39A /* BonusRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusRoundView.swift; sourceTree = "<group>"; };
+		81C456382A781F5C00CAC39A /* GameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 		816FDCF92A53184D00DD25CB /* GuessTheStateFlag */ = {
 			isa = PBXGroup;
 			children = (
+				81C456352A78141700CAC39A /* Info.plist */,
 				816FDCFA2A53184D00DD25CB /* GuessTheStateFlagApp.swift */,
 				816FDD1B2A5726B300DD25CB /* Views */,
 				816FDD1C2A5726BA00DD25CB /* ButtonStyles */,
@@ -94,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				816FDD0D2A532F5D00DD25CB /* StateList.swift */,
+				81C456382A781F5C00CAC39A /* GameBrain.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				816FDCFC2A53184D00DD25CB /* ContentView.swift */,
+				81C456362A78161200CAC39A /* BonusRoundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,11 +216,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				816FDD0E2A532F5D00DD25CB /* StateList.swift in Sources */,
+				81C456372A78161200CAC39A /* BonusRoundView.swift in Sources */,
 				816FDCFD2A53184D00DD25CB /* ContentView.swift in Sources */,
 				816FDD122A5335C100DD25CB /* Extension-RoundedCorner.swift in Sources */,
 				816FDD182A57225000DD25CB /* ButtonStyle - Rotation.swift in Sources */,
 				816FDCFB2A53184D00DD25CB /* GuessTheStateFlagApp.swift in Sources */,
 				816FDD0C2A53222A00DD25CB /* Extension-FontStyles.swift in Sources */,
+				81C456392A781F5C00CAC39A /* GameBrain.swift in Sources */,
 				816FDD092A531DD200DD25CB /* Extension-Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,9 +355,9 @@
 				DEVELOPMENT_TEAM = HJ5KH98N5D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GuessTheStateFlag/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -374,9 +384,9 @@
 				DEVELOPMENT_TEAM = HJ5KH98N5D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GuessTheStateFlag/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

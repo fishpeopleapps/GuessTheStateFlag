@@ -4,46 +4,50 @@
 //
 //  Created by KBrewer on 7/3/23.
 //
-// TODO: Add a bonus point if you can guess the capital
+// TODO: I would like to move out the final func but I am not sure how to change views
+// TODO: Improve launch screen with a photo/logo
+// TODO: If the user reaches ## then they win the game
+// TODO: Also why does the launch screen stay up so long?
 
 import SwiftUI
 
 struct ContentView: View {
     /// Detects if the user is using light or dark mode
     @Environment(\.colorScheme) var colorScheme
-    /// We will be displaying three flags, this creates a correct answer within the three displayed
-    @State private var correctAnswer = Int.random(in: 0...2)
     @State private var showingAlert = false
-    @State private var showingSheet = false
-    /// Keeps the user score in UserDefaults
-    @AppStorage("score") var score: Int = 0
+    @State private var displayBonusRound = false
+    /// We're going to keep the userScore here so it can be updated within the BonusRoundView
+    @StateObject var game = GameBrain()
     /// Stores the userguess so the correct answer can be displayed in the alert
-    @State private var userGuess = "Minnesota"
-    /// Starts the rotation animation effect at 0
-    @State private var animationAmt: Double = 0
+    @State private var userGuess = ""
+    @State var correctCapital = ""
+    /// View
     var body: some View {
         ZStack {
+            /// Background
             AngularGradient(
                 gradient: colorScheme == .dark ? Color.darkModeColors : Color.lightModeColors,
                 center: .center
             )
             .ignoresSafeArea()
+            /// Main View Area
             GeometryReader { geo in
             VStack {
                 VStack {
                     Text("Guess the Flag of")
                         .titleTextStyle()
-                    Text(stateList[correctAnswer].stateName)
+                    Text(stateList[game.correctAnswer].stateName)
                         .headlineTextStyle()
                 }
                 .frame(width: geo.size.width * 1.0, height: geo.size.height * 0.20)
-
                     VStack(spacing: 10) {
                         ForEach(0..<3) { num in
                             Button {
-                                animationAmt += 45.0
+                                correctCapital = stateList[num].capital
+                                game.animationAmt += 45.0
                                 checkAnswer(num)
                                 userGuess = stateList[num].stateName
+                                game.nextQuestion()
                             } label: {
                                     Image(stateList[num].stateName)
                                         .resizable()
@@ -57,47 +61,38 @@ struct ContentView: View {
                     }
                     .frame(width: geo.size.width * 1.0, height: geo.size.height * 0.65)
                 VStack {
-                    Text("Current Score: \(score)")
+                    Text("Current Score: \(game.userScore)")
                         .headlineTextStyle()
                     Button("Reset Score") {
-                        score = 0
+                        game.userScore = 0
                     }.tint(.secondary)
                 }
                 .frame(width: geo.size.width * 1.0, height: geo.size.height * 0.15)
-
                 }
             }
-
         }
+        .sheet(isPresented: $displayBonusRound, content: {
+            BonusRoundView(correctAnswer: correctCapital)
+        })
         .alert("Wrong", isPresented: $showingAlert) {
-            Button("Continue", action: nextQuestion)
+            Button("Continue", action: game.nextQuestion)
         } message: {
             Text("That flag was \(userGuess)")
         }
+        .environmentObject(game)
     }
     /// Checks to see if the flag guessed matches the correct answer
     /// - Parameter num: The index tapped
     func checkAnswer(_ num: Int) {
-        if num == correctAnswer {
-            score += 1
-            rightAnswer()
-            nextQuestion()
+        if num == game.correctAnswer {
+            game.userScore += 1
+            game.rightAnswer()
+            displayBonusRound.toggle()
         } else {
             showingAlert = true
         }
     }
-    /// Shuffles the state list and chooses a new correct answer
-    func nextQuestion() {
-        animationAmt = 0
-        stateList.shuffle()
-        correctAnswer = Int.random(in: 0..<2)
-    }
-    /// Haptic vibration if user selects the correct answer
-    func rightAnswer() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
 
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
