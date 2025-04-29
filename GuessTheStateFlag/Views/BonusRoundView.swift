@@ -14,7 +14,7 @@ import SwiftUI
 struct BonusRoundView: View {
     var correctAnswer: String
     @Environment(\.dismiss) private var dismiss
-    @EnvironmentObject var game: GameBrain
+    @Environment(GameBrain.self) var game
     var body: some View {
         ZStack {
             Color(.black)
@@ -42,7 +42,6 @@ struct BonusRoundView: View {
                 }
             }
         }
-        .environmentObject(game)
     }
     func answerPool(_ correctAnswer: String) -> [String] {
         var answerPool = [String]()

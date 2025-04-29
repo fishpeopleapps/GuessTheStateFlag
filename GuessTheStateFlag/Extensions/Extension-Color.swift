@@ -12,3 +12,4 @@ extension Color {
     static let lightModeColors = Gradient(colors: [.indigo, .cyan, .mint, .blue, .teal, .cyan, .mint, .indigo])
     static let darkModeColors = Gradient(colors: [.white, .red, .blue, .red, .white])
 }
+

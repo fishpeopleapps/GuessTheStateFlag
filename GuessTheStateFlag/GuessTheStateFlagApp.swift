@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct GuessTheStateFlagApp: App {
+    @State private var gameBrain = GameBrain()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(gameBrain)
         }
     }
 }

@@ -18,6 +18,7 @@
 		816FDD182A57225000DD25CB /* ButtonStyle - Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816FDD172A57225000DD25CB /* ButtonStyle - Rotation.swift */; };
 		81C456372A78161200CAC39A /* BonusRoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C456362A78161200CAC39A /* BonusRoundView.swift */; };
 		81C456392A781F5C00CAC39A /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C456382A781F5C00CAC39A /* GameBrain.swift */; };
+		DF3C247F2B3A77E8002117EE /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C247E2B3A77E8002117EE /* Flag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		81C456352A78141700CAC39A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		81C456362A78161200CAC39A /* BonusRoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusRoundView.swift; sourceTree = "<group>"; };
 		81C456382A781F5C00CAC39A /* GameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBrain.swift; sourceTree = "<group>"; };
+		DF3C247E2B3A77E8002117EE /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				816FDD172A57225000DD25CB /* ButtonStyle - Rotation.swift */,
+				DF3C247E2B3A77E8002117EE /* Flag.swift */,
 			);
 			path = ButtonStyles;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				816FDD182A57225000DD25CB /* ButtonStyle - Rotation.swift in Sources */,
 				816FDCFB2A53184D00DD25CB /* GuessTheStateFlagApp.swift in Sources */,
 				816FDD0C2A53222A00DD25CB /* Extension-FontStyles.swift in Sources */,
+				DF3C247F2B3A77E8002117EE /* Flag.swift in Sources */,
 				81C456392A781F5C00CAC39A /* GameBrain.swift in Sources */,
 				816FDD092A531DD200DD25CB /* Extension-Color.swift in Sources */,
 			);
@@ -360,6 +364,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,6 +394,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
